@@ -1,42 +1,41 @@
 ---
-description: Rule for Task List Management from a generate-tasks.mdc
+description: Regra para Gerenciamento de Lista de Tarefas a partir de um generate-tasks.mdc
 globs:
   - ".ai/tasks/*.md"
 alwaysApply: false
 ---
 
+# Gerenciamento da Lista de Tarefas
 
-# Task List Management
+Diretrizes para gerenciar listas de tarefas em arquivos markdown para acompanhar o progresso na conclusão de um PRD
 
-Guidelines for managing task lists in markdown files to track progress on completing a PRD
+## Implementação das Tarefas
 
-## Task Implementation
+- **Uma subtarefa por vez:** NÃO inicie a próxima subtarefa até pedir permissão ao usuário e ele responder “sim” ou “s”.  
+- **Protocolo de conclusão:**  
+  1. Quando terminar uma **subtarefa**, marque-a imediatamente como concluída alterando `[ ]` para `[x]`.  
+  2. Se **todas** as subtarefas de uma tarefa principal estiverem `[x]`, marque também a **tarefa principal** como concluída.  
+  - Pare após cada subtarefa e aguarde a autorização do usuário.
 
-- **One sub-task at a time:** Do **NOT** start the next sub-task until you ask the user for permission and they say “yes” or “y”.  
-- **Completion protocol:**  
-  1. When you finish a **sub-task**, immediately mark it as completed by changing `[ ]` to `[x]`.  
-  2. If **all** subtasks underneath a parent task are now `[x]`, also mark the **parent task** as completed.  
-  - Stop after each sub-task and wait for the user’s go‑ahead.
+## Manutenção da Lista de Tarefas
 
-## Task List Maintenance
+1. **Atualize a lista de tarefas conforme trabalha:**  
+   - Marque as tarefas e subtarefas como concluídas (`[x]`) conforme o protocolo acima.  
+   - Adicione novas tarefas conforme elas surgirem.  
 
-1. **Update the task list as you work:**  
-   - Mark tasks and subtasks as completed (`[x]`) per the protocol above.  
-   - Add new tasks as they emerge.  
+2. **Mantenha a seção “Arquivos Relevantes”:**  
+   - Liste todos os arquivos criados ou modificados.  
+   - Dê a cada arquivo uma descrição em uma linha sobre sua finalidade.
 
-2. **Maintain the “Relevant Files” section:**  
-   - List every file created or modified.  
-   - Give each file a one-line description of its purpose.
+## Instruções para a IA
 
-## AI Instructions
+Ao trabalhar com listas de tarefas, a IA **deve**:
 
-When working with task lists, the AI **must**:
-
-1. Regularly update the task list file after finishing any significant work.  
-2. Follow the completion protocol:  
-   - Mark each finished **sub-task** `[x]`.  
-   - Mark the **parent task** `[x]` once **all** its subtasks are `[x]`.  
-3. Add newly discovered tasks.  
-4. Keep “Relevant Files” accurate and up to date.  
-5. Before starting work, check which sub-task is next.  
-6. After implementing a sub-task, update the file and then pause for user approval.
+1. Atualizar regularmente o arquivo da lista de tarefas após concluir qualquer trabalho significativo.  
+2. Seguir o protocolo de conclusão:  
+   - Marcar cada **subtarefa** concluída com `[x]`.  
+   - Marcar a **tarefa principal** com `[x]` assim que **todas** as subtarefas estiverem `[x]`.  
+3. Adicionar tarefas recém-descobertas.  
+4. Manter a seção de “Arquivos Relevantes” precisa e atualizada.  
+5. Antes de iniciar o trabalho, verificar qual é a próxima subtarefa.  
+6. Após implementar uma subtarefa, atualizar o arquivo e então pausar para aprovação do usuário.

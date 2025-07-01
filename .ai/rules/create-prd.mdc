@@ -1,74 +1,74 @@
 ---
-description: Generating a Product Requirements Document (PRD)
+description: Gerando um Documento de Requisitos do Produto (PRD)
 globs:
-  - ".ai/tasks/*.md"
+  - "tasks/*.md"
 alwaysApply: false
 ---
 
-# Rule: Generating a Product Requirements Document (PRD)
+# Regra: Gerar um Documento de Requisitos do Produto (PRD)
 
-## Goal
+## Objetivo
 
-To guide an AI assistant in creating a detailed Product Requirements Document (PRD) in Markdown format, based on an initial user prompt. The PRD should be clear, actionable, and suitable for a junior developer to understand and implement the feature.
+Guiar um assistente de IA na criação de um Documento de Requisitos do Produto (PRD) detalhado no formato Markdown, com base em um prompt inicial fornecido pelo usuário. O PRD deve ser claro, acionável e adequado para que um desenvolvedor júnior entenda e implemente a funcionalidade.
 
-## Process
+## Processo
 
-1. **Receive Initial Prompt:** The user provides a brief description or request for a new feature or functionality.  
-2. **Ask Clarifying Questions:** Before writing the PRD, the AI *must* ask clarifying questions to gather sufficient detail. The goal is to understand the "what" and "why" of the feature, not necessarily the "how" (which the developer will figure out).  
-3. **Generate PRD:** Based on the initial prompt and the user's answers to the clarifying questions, generate a PRD using the structure outlined below.  
-4. **Save PRD:** Save the generated document as `prd-[feature-name].md` inside the `.ai/tasks` directory.
+1. **Receber o Prompt Inicial:** O usuário fornece uma breve descrição ou solicitação de uma nova funcionalidade.  
+2. **Fazer Perguntas de Esclarecimento:** Antes de escrever o PRD, a IA *deve* fazer perguntas esclarecedoras para coletar detalhes suficientes. O objetivo é entender o "o quê" e o "porquê" da funcionalidade, não necessariamente o "como" (que será definido pelo desenvolvedor).  
+3. **Gerar o PRD:** Com base no prompt inicial e nas respostas do usuário às perguntas de esclarecimento, gere um PRD utilizando a estrutura descrita abaixo.  
+4. **Salvar o PRD:** Salve o documento gerado como `prd-[nome-da-funcionalidade].md` dentro do diretório `/tasks`.
 
-## Clarifying Questions Format
+## Formato das Perguntas de Esclarecimento
 
-When asking clarifying questions, the AI *must* format them as a numbered list. This list should support nested sub-questions using dot notation (e.g., 1, 2, 2.1, 2.2, 3).
+Ao fazer perguntas de esclarecimento, a IA *deve* formatá-las como uma lista numerada. A lista deve suportar subperguntas aninhadas usando notação com ponto (ex.: 1, 2, 2.1, 2.2, 3).
 
-Example format:  
-1. Top-level question 1?  
-2. Top-level question 2?  
-2.1. Sub-question related to question 2?  
-2.2. Another sub-question related to question 2?  
-3. Top-level question 3?
+Formato de exemplo:  
+1. Pergunta de nível superior 1?  
+2. Pergunta de nível superior 2?  
+2.1. Subpergunta relacionada à pergunta 2?  
+2.2. Outra subpergunta relacionada à pergunta 2?  
+3. Pergunta de nível superior 3?
 
-There should only be one atomic question per list item.
+Cada item da lista deve conter apenas uma pergunta atômica.
 
-The AI should adapt its *actual questions* based on the user's initial prompt, aiming to cover relevant areas like:
+A IA deve adaptar suas *perguntas reais* com base no prompt inicial do usuário, buscando abordar áreas relevantes como:
 
-- **Problem/Goal:** What problem does this feature solve? What is the primary goal?  
-- **Target User:** Who is this feature for?  
-- **Core Functionality:** What are the essential actions the user must be able to perform?  
-- **User Stories:** Can you provide examples like "As a [user], I want to [action] so that [benefit]"?  
-- **Acceptance Criteria:** How do we define success for this feature?  
-- **Scope/Boundaries:** What should this feature explicitly *not* do?  
-- **Data:** What information needs to be displayed or managed?  
-- **Design/UI:** Are there mockups or specific UI preferences?  
-- **Edge Cases:** What potential errors or unusual situations should be considered?
+- **Problema/Objetivo:** Que problema essa funcionalidade resolve? Qual é o objetivo principal?  
+- **Usuário-alvo:** Para quem é essa funcionalidade?  
+- **Funcionalidade Essencial:** Quais são as ações essenciais que o usuário precisa realizar?  
+- **Histórias de Usuário:** Você pode fornecer exemplos como "Como [usuário], quero [ação] para que [benefício]"?  
+- **Critérios de Aceitação:** Como definimos o sucesso dessa funcionalidade?  
+- **Escopo/Limites:** O que essa funcionalidade *não* deve fazer?  
+- **Dados:** Que informações precisam ser exibidas ou gerenciadas?  
+- **Design/UI:** Existem mockups ou preferências específicas de UI?  
+- **Casos Limite:** Que erros potenciais ou situações incomuns devem ser considerados?
 
-## PRD Structure
+## Estrutura do PRD
 
-The generated PRD should include the following sections:
+O PRD gerado deve incluir as seguintes seções:
 
-1. **Introduction/Overview:** Briefly describe the feature and the problem it solves. State the goal.  
-2. **Goals:** List the specific, measurable objectives for this feature.  
-3. **User Stories:** Detail the user narratives describing feature usage and benefits.  
-4. **Functional Requirements:** List the specific functionalities the feature must have. Use clear, concise language (e.g., "The system must allow users to upload a profile picture."). Number these requirements.  
-5. **Non-Goals (Out of Scope):** Clearly state what this feature will *not* include to manage scope.  
-6. **Design Considerations (Optional):** Link to mockups, describe UI/UX requirements, or mention relevant components/styles if applicable.  
-7. **Technical Considerations (Optional):** Mention any known technical constraints, dependencies, or suggestions (e.g., "Should integrate with the existing Auth module").  
-8. **Success Metrics:** How will the success of this feature be measured? (e.g., "Increase user engagement by 10%", "Reduce support tickets related to X").  
-9. **Open Questions:** List any remaining questions or areas needing further clarification.
+1. **Introdução/Visão Geral:** Descreva brevemente a funcionalidade e o problema que ela resolve. Declare o objetivo.  
+2. **Objetivos:** Liste os objetivos específicos e mensuráveis para essa funcionalidade.  
+3. **Histórias de Usuário:** Detalhe os cenários de uso e os benefícios esperados.  
+4. **Requisitos Funcionais:** Liste as funcionalidades específicas que essa feature deve ter. Use uma linguagem clara e concisa (ex.: "O sistema deve permitir que os usuários enviem uma foto de perfil."). Numere os requisitos.  
+5. **Fora do Escopo:** Especifique claramente o que *não* será incluído para manter o escopo controlado.  
+6. **Considerações de Design (Opcional):** Links para mockups, requisitos de UI/UX ou componentes relevantes, se aplicável.  
+7. **Considerações Técnicas (Opcional):** Limitações técnicas conhecidas, dependências ou sugestões (ex.: "Deve integrar-se com o módulo de autenticação existente").  
+8. **Métricas de Sucesso:** Como será medido o sucesso dessa funcionalidade? (ex.: "Aumentar o engajamento do usuário em 10%", "Reduzir chamados relacionados à funcionalidade X")  
+9. **Perguntas em Aberto:** Liste qualquer dúvida restante ou ponto que exija mais esclarecimento.
 
-## Target Audience
+## Público-Alvo
 
-Assume the primary reader of the PRD is a **junior developer**. Therefore, requirements should be explicit, unambiguous, and avoid jargon where possible. Provide enough detail for them to understand the feature's purpose and core logic.
+Assuma que o leitor principal do PRD é um **desenvolvedor júnior**. Portanto, os requisitos devem ser explícitos, sem ambiguidades e evitar jargões sempre que possível. Forneça detalhes suficientes para que ele entenda o propósito da funcionalidade e sua lógica central.
 
-## Output
+## Saída
 
-- **Format:** Markdown (`.md`)  
-- **Location:** `/tasks/`  
-- **Filename:** `prd-[meaningful-feature-name].md` (e.g., `prd-user-profile-editing.md`)
+- **Formato:** Markdown (`.md`)  
+- **Local:** `/tasks/`  
+- **Nome do Arquivo:** `prd-[nome-significativo-da-feature].md` (ex.: `prd-user-profile-editing.md`)
 
-## Final instructions
+## Instruções Finais
 
-1. Do NOT start implementing the PRD  
-2. Make sure to ask the user clarifying questions  
-3. Take the user's answers to the clarifying questions and improve the PRD
+1. NÃO comece a implementar o PRD imediatamente  
+2. Certifique-se de fazer perguntas de esclarecimento ao usuário  
+3. Use as respostas do usuário para refinar e melhorar o PRD
