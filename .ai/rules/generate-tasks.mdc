@@ -1,7 +1,7 @@
 ---
 description: Regra para gerar uma lista de tarefas a partir de um PRD
 globs:
-  - "tasks/*.md"
+  - ".ai/tasks/*.md"
 alwaysApply: false
 ---
 
@@ -14,7 +14,7 @@ Orientar um assistente de IA na criação de uma lista de tarefas detalhada e pa
 ## Saída
 
 - **Formato:** Markdown (`.md`)  
-- **Local:** `/tasks/`  
+- **Local:** `.ai/tasks/`  
 - **Nome do arquivo:** `tasks-[nome-do-arquivo-prd].md` (ex.: `tasks-prd-user-profile-editing.md`)
 
 ## Processo
@@ -26,7 +26,7 @@ Orientar um assistente de IA na criação de uma lista de tarefas detalhada e pa
 5. **Fase 2: Gerar Subtarefas:** Após a confirmação do usuário, divida cada tarefa principal em subtarefas menores e acionáveis. Garanta que as subtarefas sigam logicamente da tarefa principal e cubram os detalhes de implementação implícitos no PRD.  
 6. **Identificar Arquivos Relevantes:** Com base nas tarefas e no PRD, identifique os arquivos que precisarão ser criados ou modificados. Liste-os na seção `Relevant Files`, com uma breve descrição de sua finalidade em relação às tarefas.  
 7. **Gerar Saída Final:** Combine as tarefas principais, subtarefas e arquivos relevantes na estrutura final em Markdown.  
-8. **Salvar Lista de Tarefas:** Salve o documento gerado no diretório `/tasks/`, com o nome `tasks-[nome-do-arquivo-prd].md`, onde `[nome-do-arquivo-prd]` corresponde ao nome base do arquivo PRD de entrada (ex.: se a entrada foi `prd-user-profile-editing.md`, a saída será `tasks-prd-user-profile-editing.md`).
+8. **Salvar Lista de Tarefas:** Salve o documento gerado no diretório `.ai/tasks/`, com o nome `tasks-[nome-do-arquivo-prd].md`, onde `[nome-do-arquivo-prd]` corresponde ao nome base do arquivo PRD de entrada (ex.: se a entrada foi `prd-user-profile-editing.md`, a saída será `tasks-prd-user-profile-editing.md`).
 
 ## Formato da Saída
 
