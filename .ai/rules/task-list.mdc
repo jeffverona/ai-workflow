@@ -1,7 +1,7 @@
 ---
 description: Regra para Gerenciamento de Lista de Tarefas a partir de um generate-tasks.mdc
 globs:
-  - ".ai/tasks/*.md"
+  - "tasks/*.md"
 alwaysApply: false
 ---
 

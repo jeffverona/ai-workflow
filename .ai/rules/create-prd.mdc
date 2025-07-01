@@ -1,7 +1,7 @@
 ---
 description: Gerando um Documento de Requisitos do Produto (PRD)
 globs:
-  - ".ai/tasks/*.md"
+  - "tasks/*.md"
 alwaysApply: false
 ---
 
@@ -64,7 +64,7 @@ Assuma que o leitor principal do PRD é um **desenvolvedor júnior**. Portanto, 
 ## Saída
 
 - **Formato:** Markdown (`.md`)  
-- **Local:** `.ai/tasks/`  
+- **Local:** `.tasks/`  
 - **Nome do Arquivo:** `prd-[nome-significativo-da-feature].md` (ex.: `prd-user-profile-editing.md`)
 
 ## Instruções Finais
